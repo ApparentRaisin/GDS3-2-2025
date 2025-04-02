@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class EventExample : MonoBehaviour
 {
-    public Weapon myCoolItem;
+    //public Weapon myCoolItem;
     public UnityEvent basicEvent = new UnityEvent();
     bool keyPressed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
