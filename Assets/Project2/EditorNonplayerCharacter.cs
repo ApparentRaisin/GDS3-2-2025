@@ -18,8 +18,12 @@ public class EditorNonplayerCharacter : Editor
 
         name.stringValue = EditorGUILayout.TextField(name.stringValue);
 
+        for (int i = 0; i < routeArray.arraySize; i++)
+        {
+            routeArray.GetArrayElementAtIndex(i).vector3Value = EditorGUILayout.Vector3Field(i.ToString(), routeArray.GetArrayElementAtIndex(i).vector3Value);
+        }
 
-        if(GUILayout.Button("Add Point"))
+        if (GUILayout.Button("Add Point"))
         {
             routeArray.arraySize += 1;
         }
@@ -48,7 +52,8 @@ public class EditorNonplayerCharacter : Editor
 
         Event currentEvent = Event.current;
 
-        if(currentEvent.type == EventType.MouseDown && currentEvent.button == 0)
+        if(currentEvent.type == EventType.MouseDown && 
+            currentEvent.button == 0)
         {
             Debug.Log("click!");
         }
